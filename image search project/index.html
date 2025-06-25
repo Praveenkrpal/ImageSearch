@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image & Video Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header with Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Website Logo">
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="photos-link">Photos</a></li>
+        <li><a href="#" id="videos-link">Videos</a></li>
+      </ul>
+
+      <div class="profile-container">
+        <button class="profile-btn" id="profile-btn">
+          <i class="fas fa-user" id="profile-icon"></i>
+        </button>
+        <div class="profile-menu" id="profile-menu">
+          <a href="#" id="logout-link">Logout</a>
+          <a href="#" id="login-link">Login</a>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Home Page) -->
+  <section class="hero-section" id="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Our Site</h1>
+      <p>Discover and search for beautiful photos and videos from around the world</p>
+      <div class="search-options">
+        <a href="#" class="search-option" id="hero-photos-link">Search Photos</a>
+        <a href="#" class="search-option" id="hero-videos-link">Search Videos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section (Photos/Videos) -->
+  <section class="content-section" id="content-section">
+    <h1 class="page-title" id="page-title">Search Images</h1>
+
+    <form id="search-form">
+      <input type="text" id="search-box" placeholder="Search anything here...">
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="search-result"></div>
+    <button id="show-more-btn">Show more</button>
+  </section>
+
+  <!-- Detail Page -->
+  <section class="detail-page" id="detail-page">
+    <div class="detail-content">
+      <img id="detail-image" class="detail-media" style="display: none;" alt="Detailed view">
+      <video id="detail-video" class="detail-media video-container" controls style="display: none;"></video>
+
+      <div class="detail-info">
+        <h2 id="detail-title" class="detail-title"></h2>
+        <p id="detail-description" class="detail-description"></p>
+
+        <div class="detail-meta">
+          <span class="meta-item"><i class="fas fa-user"></i> <span id="detail-author"></span></span>
+          <span class="meta-item"><i class="fas fa-calendar"></i> <span id="detail-date"></span></span>
+          <span class="meta-item"><i class="fas fa-download"></i> <span id="detail-downloads"></span></span>
+        </div>
+
+        <div class="detail-actions">
+          <button id="download-btn" class="download-btn">
+            <i class="fas fa-download"></i> Download
+          </button>
+          <button id="back-btn" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Results
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+      </div>
+      <p class="copyright">© 2025 Image & Video Search. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <button class="close-btn" style="width: 10%;" id="close-modal">&times;</button>
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="login-btn">Login</button>
+      <p id="login-status" style="margin-top: 10px;"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
